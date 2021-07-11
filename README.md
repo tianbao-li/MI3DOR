@@ -8,9 +8,6 @@ Code will be updated after paper accepted.
 ## Application
 
 ## Citation
-If you 
-
-## Citation
 If you use this code for your research, please consider citing:
 ```
 @ARTICLE{9345420,
@@ -22,10 +19,7 @@ If you use this code for your research, please consider citing:
   doi={10.1109/TCYB.2021.3051016}}
 ```
 ## Contact
-If you have any problem about the code, feel free to contact
-- litianbao@tju.edu.cn
-
-or describe your problem in Issues.
+If you have any problem about the code, feel free to contact litianbao@tju.edu.cn or describe your problem in Issues.
 
 ## Reference
 
@@ -33,3 +27,4 @@ Ganin, Yaroslav, and Victor Lempitsky. "Unsupervised domain adaptation by backpr
 
 Wang, Jindong, et al. "Visual domain adaptation with manifold embedded distribution alignment." Proceedings of the 26th ACM international conference on Multimedia. 2018.
 
+You, Kaichao, et al. "Universal domain adaptation." Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2019.
