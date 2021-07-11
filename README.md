@@ -4,7 +4,7 @@ Related implementations for [Monocular Image-Based 3D Model Retrieval: A Benchma
 ## Application
 
 ## Citation
-If you use this code for your research, please consider citing:
+please cite:
 ```
 @ARTICLE{9345420,
   author={Song, Dan and Nie, Wei-Zhi and Li, Wen-Hui and Kankanhalli, Mohan and Liu, An-An},
