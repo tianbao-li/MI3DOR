@@ -1,5 +1,5 @@
 # MI3DOR Benchmark
-Related implementations for ["Monocular Image-Based 3D Model Retrieval: A Benchmark"](https://ieeexplore.ieee.org/document/9345420).
+Related implementations for [Monocular Image-Based 3D Model Retrieval: A Benchmark (TCYB)](https://ieeexplore.ieee.org/document/9345420)
 
 
 ## Code
