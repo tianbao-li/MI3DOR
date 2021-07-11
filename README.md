@@ -26,3 +26,10 @@ If you have any problem about the code, feel free to contact
 - litianbao@tju.edu.cn
 
 or describe your problem in Issues.
+
+## Reference
+
+Ganin, Yaroslav, and Victor Lempitsky. "Unsupervised domain adaptation by backpropagation." International conference on machine learning. PMLR, 2015.
+
+Wang, Jindong, et al. "Visual domain adaptation with manifold embedded distribution alignment." Proceedings of the 26th ACM international conference on Multimedia. 2018.
+
