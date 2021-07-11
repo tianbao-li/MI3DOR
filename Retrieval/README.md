@@ -1,1 +1,2 @@
-retrieval
+# Retrieval
+  run retrieval.m
