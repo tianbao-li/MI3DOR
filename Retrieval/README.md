@@ -1,6 +1,6 @@
 # Retrieval
 
-## Applications
+## Application
 
   1. prepare your features and labels: "Results_features_labels.mat"
   
