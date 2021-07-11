@@ -15,7 +15,7 @@ please cite:
   doi={10.1109/TCYB.2021.3051016}}
 ```
 ## Contact
-If you have any problem about the code, feel free to contact litianbao@tju.edu.cn, or describe your problem in Issues.
+If you have any problem about the code, contact litianbao@tju.edu.cn, or describe your problem in Issues.
 
 ## Reference
 
