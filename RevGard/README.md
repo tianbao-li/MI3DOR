@@ -3,4 +3,4 @@
 ### Train:
     python train.py --contig train-config-MI3DOR.yaml
 ### Test:
-    python train.py --contig train-config-MI3DOR.yaml
+    python eval.py --contig test-config-MI3DOR.yaml
