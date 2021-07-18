@@ -190,7 +190,8 @@ while global_step < args.train.min_step:
 
             counter.addOneBatch(variable_to_numpy(predict_prob), variable_to_numpy(one_hot(label, args.data.dataset.num_classes)))
 
-            logger.add_scalar('acc_test', acc_test, global_step)
+            acc_test = counter.reportAccuracy()
+	    logger.add_scalar('acc_test', acc_test, global_step)
             clear_output()
 
             data = {
