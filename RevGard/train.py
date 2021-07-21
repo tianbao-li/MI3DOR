@@ -25,7 +25,7 @@ def seed_everything(seed=1234):
 
 seed_everything()
 
-num_classes = args.data.dataset.n_classes
+num_classes = [i for i in range(args.data.dataset.n_classes)]
 n_views = args.data.dataset.n_views
 
 if args.misc.gpus < 1:
