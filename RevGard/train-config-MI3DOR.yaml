@@ -7,7 +7,7 @@ data:
     source_test: 2 # source test domain index
     target_test: 3 # target test domain index
     n_classes: 21 # number of classes
-    n_views: 4 # number of views of 3D models
+    n_views: 12 # number of views of 3D models
     
   dataloader:
     class_balance: true #
