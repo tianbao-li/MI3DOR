@@ -180,11 +180,11 @@ while global_step < args.train.min_step:
                     #----------
                     __, __, before_softmax, predict_prob = classifier.forward(feature)
 		
-		    counter.addOneBatch(variable_to_numpy(predict_prob), variable_to_numpy(one_hot(label, args.data.dataset.num_classes)))
+                    counter.addOneBatch(variable_to_numpy(predict_prob), variable_to_numpy(one_hot(label, args.data.dataset.num_classes)))
 
             acc_test = counter.reportAccuracy()
-	    logger.add_scalar('acc_test', acc_test, global_step)
-	    log_text.write(f'acc_test is {acc_test} \n')
+            logger.add_scalar('acc_test', acc_test, global_step)
+            log_text.write(f'acc_test is {acc_test} \n')
             log_text.flush()
             clear_output()
 
