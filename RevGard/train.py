@@ -47,6 +47,8 @@ logger = SummaryWriter(log_dir)
 with open(join(log_dir, 'config.yaml'), 'w') as f:
     f.write(yaml.dump(save_config))
 
+log_text = open(join(log_dir, 'log.txt'), 'w')
+
 model_dict = {
     'resnet50': ResNet50Fc,
     'vgg16': VGG16Fc,
@@ -182,6 +184,8 @@ while global_step < args.train.min_step:
 
             acc_test = counter.reportAccuracy()
 	    logger.add_scalar('acc_test', acc_test, global_step)
+	    log_text.write(f'acc_test is {acc_test} \n')
+            log_text.flush()
             clear_output()
 
             data = {
