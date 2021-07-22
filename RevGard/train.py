@@ -177,18 +177,8 @@ while global_step < args.train.min_step:
                     label = label[::n_views]
                     #----------
                     __, __, before_softmax, predict_prob = classifier.forward(feature)
-
-
-            counters = [AccuracyCounter() for x in range(len(num_classes))]
-
-            for (each_predict_prob, each_label) in zip(predict_prob, label):                       
-                if each_label in num_classes:
-                    counters[each_label].Ntotal += 1.0
-                    each_pred_id = np.argmax(each_predict_prob.cpu())
-                    if each_pred_id == each_label.cpu():
-                        counters[each_label].Ncorrect += 1.0
-
-            counter.addOneBatch(variable_to_numpy(predict_prob), variable_to_numpy(one_hot(label, args.data.dataset.num_classes)))
+		
+		    counter.addOneBatch(variable_to_numpy(predict_prob), variable_to_numpy(one_hot(label, args.data.dataset.num_classes)))
 
             acc_test = counter.reportAccuracy()
 	    logger.add_scalar('acc_test', acc_test, global_step)
