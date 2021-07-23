@@ -165,7 +165,7 @@ while global_step < args.train.min_step:
 
         if global_step % args.test.test_interval == 0:
 
-            counters = AccuracyCounter()
+            counter = AccuracyCounter()
             with TrainingModeManager([feature_extractor, classifier], train=False) as mgr, torch.no_grad():
 
                 for i, (im, label) in enumerate(tqdm(target_test_dl, desc='testing ')):
