@@ -27,6 +27,8 @@ def seed_everything(seed=1234):
 
 seed_everything()
 
+num_classes = args.data.dataset.n_classes
+
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
 gpu_ids = [0]
@@ -44,7 +46,7 @@ class TotalNet(nn.Module):
     def __init__(self):
         super(TotalNet, self).__init__()
         self.feature_extractor = model_dict[args.model.base_model](args.model.pretrained_model)
-        classifier_output_dim = len(source_classes)
+        classifier_output_dim = num_classes
         self.classifier = CLS(self.feature_extractor.output_num(), classifier_output_dim, bottle_neck_dim=256)
         self.discriminator = AdversarialNetwork(256)
 
