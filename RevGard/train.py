@@ -25,7 +25,7 @@ def seed_everything(seed=1234):
 
 seed_everything()
 
-num_classes = [i for i in range(args.data.dataset.n_classes)]
+num_classes = args.data.dataset.n_classes
 n_views = args.data.dataset.n_views
 
 if args.misc.gpus < 1:
@@ -59,7 +59,7 @@ class TotalNet(nn.Module):
     def __init__(self):
         super(TotalNet, self).__init__()
         self.feature_extractor = model_dict[args.model.base_model](args.model.pretrained_model)
-        classifier_output_dim = len(num_classes)
+        classifier_output_dim = num_classes
         self.classifier = CLS(self.feature_extractor.output_num(), classifier_output_dim, bottle_neck_dim=256)
         self.discriminator = AdversarialNetwork(256)
 
@@ -156,7 +156,7 @@ while global_step < args.train.min_step:
 
         if global_step % args.log.log_interval == 0:
             counter = AccuracyCounter()
-            counter.addOneBatch(variable_to_numpy(one_hot(label_source, len(num_classes))), variable_to_numpy(predict_prob_source))
+            counter.addOneBatch(variable_to_numpy(one_hot(label_source, num_classes)), variable_to_numpy(predict_prob_source))
             acc_train = torch.tensor([counter.reportAccuracy()]).to(output_device)
             logger.add_scalar('adv_loss', adv_loss, global_step)
             logger.add_scalar('ce', ce, global_step)
@@ -180,7 +180,7 @@ while global_step < args.train.min_step:
                     #----------
                     __, __, before_softmax, predict_prob = classifier.forward(feature)
 		
-                    counter.addOneBatch(variable_to_numpy(predict_prob), variable_to_numpy(one_hot(label, len(num_classes))))
+                    counter.addOneBatch(variable_to_numpy(predict_prob), variable_to_numpy(one_hot(label, num_classes)))
 
             acc_test = counter.reportAccuracy()
             logger.add_scalar('acc_test', acc_test, global_step)
