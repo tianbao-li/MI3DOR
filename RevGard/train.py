@@ -129,7 +129,6 @@ while global_step < args.train.min_step:
 		
         # ==============================compute loss
         adv_loss = torch.zeros(1, 1).to(output_device)
-        adv_loss_separate = torch.zeros(1, 1).to(output_device)
 
         tmp = nn.BCELoss(reduction='none')(domain_prob_discriminator_source, torch.ones_like(domain_prob_discriminator_source))
         adv_loss += torch.mean(tmp, dim=0, keepdim=True)
