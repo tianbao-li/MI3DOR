@@ -15,8 +15,10 @@ please cite:
   author={Song, Dan and Nie, Wei-Zhi and Li, Wen-Hui and Kankanhalli, Mohan and Liu, An-An},
   journal={IEEE Transactions on Cybernetics}, 
   title={Monocular Image-Based 3-D Model Retrieval: A Benchmark}, 
-  year={2021},
-  pages={1-14},
+  year={2022},
+  volume={52},
+  number={8},
+  pages={8114-8127},
   doi={10.1109/TCYB.2021.3051016}}
 ```
 ## Contact
